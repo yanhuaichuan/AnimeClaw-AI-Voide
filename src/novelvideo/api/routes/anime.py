@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Elastic-2.0
 # Copyright (c) 2026 yanhuaichuan
-"""AnimeClaw REST surface — /api/v1/anime. File-backed, no new database."""
+"""百川Claw REST surface — /api/v1/anime. File-backed, no new database."""
 
 from __future__ import annotations
 

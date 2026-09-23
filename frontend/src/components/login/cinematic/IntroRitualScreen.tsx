@@ -23,7 +23,7 @@ export function IntroRitualScreen({
   return (
     <section
       className={styles.layer}
-      aria-label="AnimeClaw intro"
+      aria-label="百川Claw intro"
       onClick={onComplete}
       onWheel={onComplete}
     >
@@ -39,7 +39,7 @@ export function IntroRitualScreen({
         <div className={styles.hudBottomRight}>4K · 24FPS</div>
         <img
           className={styles.brandMark}
-          src="/login-cinematic/final-mark.png"
+          src="/brand/logo.png"
           alt=""
           aria-hidden="true"
           draggable={false}

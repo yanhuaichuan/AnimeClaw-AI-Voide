@@ -21,15 +21,15 @@ DEFAULT_NEGATIVES = [
 
 def default_style() -> StyleBible:
     return StyleBible(
-        art_style="modern anime, sakura-ink contrast, cinematic manga framing",
+        art_style="modern anime, sci-tech cyan-violet contrast, cinematic manga framing",
         line_style="clean ink, confident contours",
-        color_palette=["#ff7ab6", "#7c5cff", "#1a0d16", "#f4eef8", "#ffd6a8"],
-        lighting="soft moonlight rim, pink bounce fill",
+        color_palette=["#00d2ff", "#7042ff", "#07091a", "#e8f4ff", "#ff00e5"],
+        lighting="cool cyan rim, violet bounce fill",
         character_rendering="stable face, signature accessories always visible",
         background_rendering="readable manga backgrounds, depth without noise",
         face_style="anime face, same bone structure every shot",
         eye_style="detailed iris, consistent eye color",
-        shadow_style="cel shadow, two-tone with violet dusk",
+        shadow_style="cel shadow, two-tone with deep navy dusk",
         negative_profile=list(DEFAULT_NEGATIVES),
     )
 

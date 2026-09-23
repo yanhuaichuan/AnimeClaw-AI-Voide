@@ -2,30 +2,30 @@
  * Copyright (c) 2026 ClaymoreLab
  *
  * 下载页样式。与登录页同属对外落地页,不走应用内主题 token:
- * 这一页锁死深色,配色取自 AnimeClaw 墨黑底 + 樱粉强调。
+ * 这一页锁死深色,配色取自 百川AI漫剧 科技深蓝 + 电青强调。
  * 偏离主规范的边界见 DESIGN.md 的 Scope & Exceptions。
  */
 
 .page {
-  --ink: #101216;
-  --ink-deep: #0b0c0f;
-  --panel: #171a1f;
-  --card: #1d2127;
-  --card-hi: #23282f;
+  --ink: #07091a;
+  --ink-deep: #050712;
+  --panel: #10132a;
+  --card: #141836;
+  --card-hi: #1a1f3d;
 
-  --line: rgba(168, 180, 190, 0.12);
-  --line-soft: rgba(168, 180, 190, 0.07);
-  --line-hard: rgba(168, 180, 190, 0.22);
+  --line: rgba(0, 210, 255, 0.14);
+  --line-soft: rgba(148, 163, 200, 0.1);
+  --line-hard: rgba(0, 210, 255, 0.28);
 
-  --text: #e9ecef;
-  --text-mid: #b4bdc6;
-  --dim: #868f99;
-  --dim-deep: #5c646d;
+  --text: #e8f4ff;
+  --text-mid: #a8b8d8;
+  --dim: #7a8ab0;
+  --dim-deep: #4e5d82;
 
-  --zinc: #a8b4be;
-  --rust: #d9603a;
-  --rust-hot: #ee7549;
-  --rust-dim: rgba(217, 96, 58, 0.16);
+  --zinc: #7dd3fc;
+  --rust: #00d2ff;
+  --rust-hot: #38e0ff;
+  --rust-dim: rgba(0, 210, 255, 0.16);
 
   --s2: 16px;
   --s3: 24px;
@@ -149,16 +149,19 @@
 
 .brandMark {
   display: block;
-  width: 26px;
-  height: 26px;
-  border-radius: 5px;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(112, 66, 255, 0.45));
 }
 
 .brandWordmark {
   display: block;
   height: 28px;
   width: auto;
-  opacity: 0.92;
+  max-width: min(240px, 46vw);
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.35));
 }
 
 .topNav {
@@ -244,10 +247,25 @@
 }
 
 .heroWordmark {
-  display: block;
-  width: min(460px, 74%);
-  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: var(--s4);
+}
+
+.heroWordmark img:first-child {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 22px rgba(112, 66, 255, 0.55));
+}
+
+.heroWordmark img:last-child {
+  height: 48px;
+  width: auto;
+  max-width: min(420px, 70vw);
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0, 210, 255, 0.3));
 }
 
 .heroTitle {
@@ -814,10 +832,25 @@
   gap: var(--s3);
 }
 
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.85;
+}
+
+.footerMark {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
 .footerWordmark {
-  height: 24px;
+  display: block;
+  height: 22px;
   width: auto;
-  opacity: 0.55;
+  object-fit: contain;
 }
 
 .footerLinks {

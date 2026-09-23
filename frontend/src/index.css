@@ -18,60 +18,59 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ═══════════════════════════════════════════════════════════
-   Theme: AnimeClaw — ink black + sakura magenta.
-   oklch color space for perceptual uniformity.
+   Theme: 百川AI漫剧 — sci-tech navy / cyan / violet.
+   Dark cockpit first; cyan is the action accent.
    Toggle via `.dark` class on <html>.
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f7ff;
+  --foreground: #0b1026;
   --card: #ffffff;
-  --card-foreground: #171717;
+  --card-foreground: #0b1026;
   --popover: #ffffff;
-  --popover-foreground: #171717;
-  --primary: oklch(0.5800 0.1900 350.0000);
+  --popover-foreground: #0b1026;
+  --primary: oklch(0.5800 0.1400 240.0000);
   --primary-foreground: #ffffff;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #171717;
-  --muted: #f4f4f5;
-  --muted-foreground: #52525b;
-  /* Neutral hover/active surface so light mode stays white, not dusty pink. */
-  --accent: #f4f4f5;
-  --accent-foreground: #171717;
+  --secondary: #e8eefc;
+  --secondary-foreground: #0b1026;
+  --muted: #e8eefc;
+  --muted-foreground: #4b5678;
+  --accent: #e8eefc;
+  --accent-foreground: #0b1026;
   --destructive: oklch(0.6257 0.2058 29.0773);
   --destructive-foreground: #ffffff;
   --success: oklch(0.6800 0.1620 150.0000);
   --success-foreground: #ffffff;
   --warning: oklch(0.7500 0.1600 75.0000);
   --warning-foreground: #171717;
-  --border: #e5e5e5;
-  --input: #e5e5e5;
-  --ring: oklch(0.6400 0.1900 350.0000);
-  --chart-1: oklch(0.6400 0.1900 350.0000);
-  --chart-2: oklch(0.6200 0.1600 305.0000);
-  --chart-3: oklch(0.6800 0.1400 20.0000);
-  --chart-4: oklch(0.7200 0.1600 330.0000);
-  --chart-5: oklch(0.7000 0.1400 290.0000);
-  --sidebar: #ffffff;
-  --sidebar-foreground: #171717;
-  --sidebar-primary: oklch(0.5800 0.1900 350.0000);
+  --border: #d5def2;
+  --input: #d5def2;
+  --ring: oklch(0.5800 0.1400 240.0000);
+  --chart-1: oklch(0.5800 0.1400 240.0000);
+  --chart-2: oklch(0.5800 0.1800 300.0000);
+  --chart-3: oklch(0.6200 0.2000 330.0000);
+  --chart-4: oklch(0.7200 0.1400 80.0000);
+  --chart-5: oklch(0.6200 0.1000 260.0000);
+  --sidebar: #f4f7ff;
+  --sidebar-foreground: #0b1026;
+  --sidebar-primary: oklch(0.5800 0.1400 240.0000);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f4f4f5;
-  --sidebar-accent-foreground: #171717;
-  --sidebar-border: #e5e5e5;
-  --sidebar-ring: oklch(0.6400 0.1500 205.0000);
+  --sidebar-accent: #e8eefc;
+  --sidebar-accent-foreground: #0b1026;
+  --sidebar-border: #d5def2;
+  --sidebar-ring: oklch(0.5800 0.1400 240.0000);
   --radius: 1rem;
   --tracking-normal: 0em;
   --spacing: 0.25rem;
   --font-family-ui-default: "Noto Sans SC", "Noto Sans CJK SC", "Noto Sans CJK JP", "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, "Segoe UI", sans-serif;
   --font-family-ui-macos: "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Helvetica Neue", Arial, sans-serif;
-  --bg-rgb: 255 255 255;
-  --surface-rgb: 250 250 250;
-  --border-rgb: 229 229 229;
-  --text-rgb: 23 23 23;
-  --text-muted-rgb: 82 82 91;
-  --accent-rgb: 225 29 116;
+  --bg-rgb: 244 247 255;
+  --surface-rgb: 255 255 255;
+  --border-rgb: 213 222 242;
+  --text-rgb: 11 16 38;
+  --text-muted-rgb: 75 86 120;
+  --accent-rgb: 37 99 235;
   --ui-surface-panel: rgba(255, 255, 255, 0.96);
   --ui-surface-modal: #ffffff;
   --ui-surface-field: #ffffff;
@@ -101,53 +100,53 @@
 }
 
 .dark {
-  --background: #0c0814;
-  --foreground: oklch(0.9550 0.0120 330.0000);
-  --card: oklch(0.2800 0.0400 320.0000);
-  --card-foreground: oklch(0.9550 0.0120 330.0000);
-  --popover: oklch(0.2800 0.0400 320.0000);
-  --popover-foreground: oklch(0.9550 0.0120 330.0000);
-  --primary: oklch(0.7600 0.1750 350.0000);
-  --primary-foreground: oklch(0.1800 0.0300 330.0000);
-  --secondary: oklch(0.3000 0.0700 330.0000);
-  --secondary-foreground: oklch(0.7600 0.1750 350.0000);
-  --muted: oklch(0.2400 0.0350 320.0000);
-  --muted-foreground: oklch(0.7200 0.0400 320.0000);
-  /* Muted sakura-tinted surface — used by shadcn for neutral hover/active
-     states. Keep the magenta for key actions and selected states. */
-  --accent: oklch(0.3000 0.0700 330.0000);
-  --accent-foreground: oklch(0.9550 0.0120 330.0000);
+  /* Sci-tech cockpit: deep navy + cyan action + violet glow. */
+  --background: #07091a;
+  --foreground: oklch(0.9600 0.0150 250.0000);
+  --card: #10132a;
+  --card-foreground: oklch(0.9600 0.0150 250.0000);
+  --popover: #121630;
+  --popover-foreground: oklch(0.9600 0.0150 250.0000);
+  --primary: oklch(0.7800 0.1400 220.0000);
+  --primary-foreground: #06101c;
+  --secondary: #1a1f3d;
+  --secondary-foreground: oklch(0.8800 0.0400 250.0000);
+  --muted: #121630;
+  /* Keep secondary copy readable on navy cockpit (#07091a). */
+  --muted-foreground: #b4c2dc;
+  --accent: #1a1f3d;
+  --accent-foreground: oklch(0.9600 0.0150 250.0000);
   --destructive: oklch(0.6257 0.2058 29.0773);
   --destructive-foreground: oklch(0.9436 0.0051 228.8204);
   --success: oklch(0.7200 0.1520 150.0000);
   --success-foreground: oklch(0.2153 0.0187 235.1251);
-  --warning: oklch(0.7800 0.1500 75.0000);
+  --warning: oklch(0.8800 0.1600 100.0000);
   --warning-foreground: oklch(0.2153 0.0187 235.1251);
-  --border: oklch(0.3400 0.0400 320.0000);
-  --input: oklch(0.3400 0.0400 320.0000);
-  --ring: oklch(0.7600 0.1750 350.0000);
-  --chart-1: oklch(0.7600 0.1750 350.0000);
-  --chart-2: oklch(0.7000 0.1600 300.0000);
-  --chart-3: oklch(0.7200 0.1400 20.0000);
-  --chart-4: oklch(0.7400 0.1500 330.0000);
-  --chart-5: oklch(0.7200 0.1300 290.0000);
-  --sidebar: oklch(0.1800 0.0300 320.0000);
-  --sidebar-foreground: oklch(0.9550 0.0120 330.0000);
-  --sidebar-primary: oklch(0.7600 0.1750 350.0000);
-  --sidebar-primary-foreground: oklch(0.1800 0.0300 330.0000);
-  --sidebar-accent: oklch(0.3000 0.0700 330.0000);
-  --sidebar-accent-foreground: oklch(0.7600 0.1750 350.0000);
-  --sidebar-border: oklch(0.3400 0.0400 320.0000);
-  --sidebar-ring: oklch(0.7600 0.1750 350.0000);
-  --bg-rgb: 12 8 20;
-  --surface-rgb: 23 17 31;
-  --border-rgb: 46 36 60;
-  --text-rgb: 244 238 248;
-  --text-muted-rgb: 154 142 171;
-  --accent-rgb: 255 122 182;
-  --ui-surface-panel: rgba(23, 17, 31, 0.82);
-  --ui-surface-modal: rgba(34, 24, 46, 0.98);
-  --ui-surface-field: rgba(16, 12, 24, 0.88);
+  --border: #2a3158;
+  --input: #2a3158;
+  --ring: oklch(0.7800 0.1400 220.0000);
+  --chart-1: oklch(0.7800 0.1400 220.0000);
+  --chart-2: oklch(0.6800 0.2000 300.0000);
+  --chart-3: oklch(0.7200 0.2200 330.0000);
+  --chart-4: oklch(0.8600 0.1600 100.0000);
+  --chart-5: oklch(0.7000 0.1200 260.0000);
+  --sidebar: #060814;
+  --sidebar-foreground: oklch(0.9600 0.0150 250.0000);
+  --sidebar-primary: oklch(0.7800 0.1400 220.0000);
+  --sidebar-primary-foreground: #06101c;
+  --sidebar-accent: #1a1f3d;
+  --sidebar-accent-foreground: oklch(0.8800 0.0400 250.0000);
+  --sidebar-border: #2a3158;
+  --sidebar-ring: oklch(0.7800 0.1400 220.0000);
+  --bg-rgb: 7 9 26;
+  --surface-rgb: 16 19 42;
+  --border-rgb: 42 49 88;
+  --text-rgb: 232 244 255;
+  --text-muted-rgb: 180 194 220;
+  --accent-rgb: 0 210 255;
+  --ui-surface-panel: rgba(16, 19, 42, 0.88);
+  --ui-surface-modal: rgba(18, 22, 48, 0.98);
+  --ui-surface-field: rgba(10, 12, 28, 0.92);
   --ui-border-soft: rgba(255, 255, 255, 0.05);
   --ui-border-strong: rgba(255, 255, 255, 0.12);
   --canvas-node-input-placeholder: rgba(196, 196, 202, 0.68);
@@ -1798,31 +1797,41 @@ button:hover .st-keyframe-video-play {
 .animeclaw-wordmark__mark {
   display: grid;
   place-items: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 7px;
-  font-size: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: -0.04em;
-  color: #1a0d16;
+  color: #e8f4ff;
   background:
-    linear-gradient(135deg, #ff8cc8 0%, #ff5ea8 46%, #7c5cff 100%);
-  box-shadow: 0 0 16px rgb(255 122 182 / 0.35);
+    radial-gradient(circle at 35% 30%, #7c5cff 0%, #1a1b4b 70%);
+  box-shadow:
+    0 0 0 1px rgb(0 210 255 / 0.28),
+    0 0 18px rgb(112 66 255 / 0.35);
 }
 
 .animeclaw-wordmark__mark-img {
   display: block;
-  width: 22px;
-  height: 22px;
-  border-radius: 7px;
-  box-shadow: 0 0 16px rgb(255 122 182 / 0.35);
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgb(112 66 255 / 0.45));
+}
+
+.animeclaw-wordmark__text-img {
+  display: block;
+  height: 28px;
+  width: auto;
+  max-width: min(240px, 46vw);
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgb(0 210 255 / 0.35));
 }
 
 .animeclaw-wordmark__name {
-  font-size: 15px;
-  font-weight: 750;
-  letter-spacing: -0.02em;
-  background: linear-gradient(90deg, #ffe3f2, #ff7ab6 55%, #c4b5fd);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, #e8f4ff 0%, #7dd3fc 45%, #a78bfa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

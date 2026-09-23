@@ -13,7 +13,7 @@
   color: rgb(var(--text-rgb));
   background:
     radial-gradient(1200px 480px at 12% -10%, rgb(var(--accent-rgb) / 0.16), transparent 58%),
-    radial-gradient(900px 420px at 100% 0%, rgb(124 92 255 / 0.12), transparent 52%),
+    radial-gradient(900px 420px at 100% 0%, rgb(255 192 120 / 0.14), transparent 52%),
     rgb(var(--bg-rgb));
 }
 
@@ -381,16 +381,23 @@
 
 .animeclaw-wordmark__mark,
 .animeclaw-wordmark__mark-img {
-  width: 22px;
-  height: 22px;
-  border-radius: 7px;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.animeclaw-wordmark__text-img {
+  height: 28px;
+  width: auto;
+  max-width: min(240px, 46vw);
+  object-fit: contain;
 }
 
 .animeclaw-wordmark__name {
-  font-size: 15px;
-  font-weight: 750;
-  letter-spacing: -0.02em;
-  background: linear-gradient(90deg, #ffe3f2, #ff7ab6 55%, #c4b5fd);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, #e8f4ff 0%, #7dd3fc 45%, #a78bfa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

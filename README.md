@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="frontend/public/brand/animeclaw-mark.svg" alt="AnimeClaw" width="88" height="88"/>
+<img src="frontend/public/brand/logo.png" alt="百川AI漫剧" width="96" height="84"/>
 
-# AnimeClaw · 漫剧工厂
+# 百川Claw · 漫剧工厂
 
 **DramaClaw 负责把故事变成视频。**  
-**AnimeClaw 负责让故事里的角色真正连续地活在视频里。**
+**百川Claw 负责让故事里的角色真正连续地活在视频里。**
 
 单机自托管的 AI 漫剧工作室：小说进、成片出；角色圣经和连续性把长篇 IP 锁住。
 
@@ -14,7 +14,7 @@
 [![许可](https://img.shields.io/badge/许可-Elastic_2.0-blue.svg)](./LICENSES/Elastic-2.0.txt)
 [![Python](https://img.shields.io/badge/Python-3.11_|_3.12-3776AB)](./pyproject.toml)
 [![前端](https://img.shields.io/badge/前端-React_19_+_Vite-61DAFB)](./frontend/package.json)
-[![GitHub](https://img.shields.io/badge/GitHub-yanhuaichuan%2FAnimeClaw-ff7ab6)](https://github.com/yanhuaichuan/AnimeClaw)
+[![GitHub](https://img.shields.io/badge/GitHub-yanhuaichuan%2FAnimeClaw-ff8a3c)](https://github.com/yanhuaichuan/AnimeClaw)
 [![Gitee](https://img.shields.io/badge/Gitee-yanhuaichuan%2Fanime--claw-C71D23)](https://gitee.com/yanhuaichuan/anime-claw)
 
 [界面演示](#界面演示) · [技术架构](#技术架构) · [技术栈](#技术栈) · [快速开始](#快速开始) · [公众号](#公众号)
@@ -25,7 +25,7 @@
 
 ## 界面演示
 
-项目管理、无限画布、资产库，是 AnimeClaw 日常工作的三条主路径。
+项目管理、无限画布、资产库，是百川Claw 日常工作的三条主路径。
 
 <p align="center">
   <img src="docs/assets/screenshot-projects.png" alt="项目管理中心：进行中的漫剧项目列表" width="920"/>
@@ -44,7 +44,7 @@
 
 ## 这不是又一个 AIGC 视频平台
 
-AnimeClaw 是基于 [DramaClaw](https://github.com/dramaclaw/dramaclaw) 的**漫剧垂直二次开发**，不是从零再造生成平台。
+百川Claw 是基于 [DramaClaw](https://github.com/dramaclaw/dramaclaw) 的**漫剧垂直二次开发**，不是从零再造生成平台。
 
 DramaClaw 核心已经打通：
 
@@ -52,7 +52,7 @@ DramaClaw 核心已经打通：
 小说 → 故事解析 → 角色 → 分集 → 剧本 → 分镜 → 图片 → 声音 → 视频
 ```
 
-AnimeClaw 只做增量，**不重写核心库、任务中心、模型网关**：
+百川Claw 只做增量，**不重写核心库、任务中心、模型网关**：
 
 ```text
 动漫世界 + 角色圣经 + 角色状态 + 画面连续性
@@ -309,7 +309,7 @@ DESIGN.md           视觉规范（对齐 frontend/src/index.css）
 扫码关注作者公众号，看更新说明与使用笔记。
 
 <p align="center">
-  <img src="docs/assets/wechat-official.jpg" alt="AnimeClaw 公众号二维码" width="220"/>
+  <img src="docs/assets/wechat-official.jpg" alt="百川Claw 公众号二维码" width="220"/>
 </p>
 
 仓库：
@@ -324,8 +324,8 @@ DESIGN.md           视觉规范（对齐 frontend/src/index.css）
 - 可以：本地 / 自托管、修改二次开发、用它给客户交付作品  
 - 不可以：把本软件作为托管服务提供给第三方（做成 SaaS 转售）
 
-AnimeClaw 域代码作者 **yanhuaichuan**。DramaClaw 商标与品牌资产仍归原权利人。
+百川Claw 域代码作者 **yanhuaichuan**。DramaClaw 商标与品牌资产仍归原权利人。
 
 ---
 
-English overview: AnimeClaw is a manga-drama layer on DramaClaw Core (Character Bible, shot continuity, manga camera). Run with Docker at `http://localhost:8080`. Full English guides: [docs/en](docs/en/README.md).
+English overview: 百川Claw is a manga-drama layer on DramaClaw Core (Character Bible, shot continuity, manga camera). Run with Docker at `http://localhost:8080`. Full English guides: [docs/en](docs/en/README.md).

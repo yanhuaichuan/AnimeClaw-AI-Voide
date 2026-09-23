@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" role="img" aria-label="BaiChuan Claw">
+  <defs>
+    <linearGradient id="bcw-ink" x1="18" y1="14" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9A4A"/>
+      <stop offset=".55" stop-color="#FF6B2C"/>
+      <stop offset="1" stop-color="#E85A1A"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0 6) scale(0.8125)">
+    <rect x="2" y="2" width="60" height="60" rx="15" fill="#FFFDF9"/>
+    <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" fill="none" stroke="#FF6B2C" stroke-opacity=".14" stroke-width="1.5"/>
+    <g fill="none" stroke="url(#bcw-ink)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 20v24" stroke-width="4.6"/>
+      <path d="M32 15.5v33" stroke-width="5"/>
+      <path d="M42 20v18.5c0 4.8 3.6 8.2 9.2 7.2" stroke-width="4.6"/>
+    </g>
+  </g>
+  <text x="64" y="38" fill="#171717" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600">Claw</text>
+</svg>

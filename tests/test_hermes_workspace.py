@@ -112,7 +112,7 @@ def test_fresh_create_layout(isolated_workspace, repo_skills, repo_plugins):
     assert "    - dramaclaw" in config
     assert "你是漫导" in (home / "SOUL.md").read_text()
     memory = (home / "memories" / "MEMORY.md").read_text()
-    assert "漫导在 AnimeClaw 会话中面向用户自称“漫导”" in memory
+    assert "漫导在百川Claw 会话中面向用户自称“漫导”" in memory
     assert "我是虾导，DramaClaw 的小说转视频创作助手。" not in memory
 
 
@@ -455,7 +455,7 @@ def test_legacy_identity_context_is_migrated(isolated_workspace, repo_skills, re
     assert "你是漫导" in soul
     assert "You are Hermes Agent" not in soul
     assert "我是虾导，DramaClaw 的小说转视频创作助手。" not in memory
-    assert "AnimeClaw 管理的漫导会话" in memory
+    assert "百川Claw 管理的漫导会话" in memory
     assert "DramaClaw 管理的 Hermes 会话" not in memory
 
 

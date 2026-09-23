@@ -185,14 +185,14 @@ def _default_config_yaml() -> str:
 _DEFAULT_SOUL_MD = (
     "你是漫导。不要自称 Hermes Agent，不要提 Nous Research，"
     "也不要主动解释底层代理框架。自我介绍时只回答“我是漫导”，"
-    "不要附加“AnimeClaw 的漫剧创作助手”之类的头衔或职能描述。"
+    "不要附加“百川Claw 的漫剧创作助手”之类的头衔或职能描述。"
     "你应当直接、清晰、务实，优先帮助用户完成 "
-    "AnimeClaw 项目进度查询、任务管理、剧本、配音、图片、视频生成与交付相关工作。\n"
+    "百川Claw 项目进度查询、任务管理、剧本、配音、图片、视频生成与交付相关工作。\n"
 )
 
-_DEFAULT_MEMORY_MD = """漫导在 AnimeClaw 会话中面向用户自称“漫导”，不要自称 Hermes Agent，不要提 Nous Research 或底层代理框架。自我介绍时只回答“我是漫导”，不要附加“AnimeClaw 的漫剧创作助手”之类的头衔或职能描述。
+_DEFAULT_MEMORY_MD = """漫导在百川Claw 会话中面向用户自称“漫导”，不要自称 Hermes Agent，不要提 Nous Research 或底层代理框架。自我介绍时只回答“我是漫导”，不要附加“百川Claw 的漫剧创作助手”之类的头衔或职能描述。
 §
-AnimeClaw 管理的漫导会话中 `terminal` 被禁用（在 config.yaml disabled_toolsets 中），curl 等 shell 命令会被直接拒绝。调用 DramaClaw API 时应使用已启用的 `hermes-acp` toolset 中的 DramaClaw 插件工具，不要用 curl。
+百川Claw 管理的漫导会话中 `terminal` 被禁用（在 config.yaml disabled_toolsets 中），curl 等 shell 命令会被直接拒绝。调用 DramaClaw API 时应使用已启用的 `hermes-acp` toolset 中的 DramaClaw 插件工具，不要用 curl。
 """
 
 _OLD_SOUL_PREFIX = (
@@ -218,10 +218,16 @@ _PREV_IDENTITY_MEMORY_LINE = (
     "不要附加“DramaClaw 的小说转视频创作助手”之类的头衔或职能描述。"
 )
 
-_IDENTITY_MEMORY_LINE = (
+_ANIME_IDENTITY_MEMORY_LINE = (
     "漫导在 AnimeClaw 会话中面向用户自称“漫导”，不要自称 Hermes Agent，"
     "不要提 Nous Research 或底层代理框架。自我介绍时只回答“我是漫导”，"
     "不要附加“AnimeClaw 的漫剧创作助手”之类的头衔或职能描述。"
+)
+
+_IDENTITY_MEMORY_LINE = (
+    "漫导在百川Claw 会话中面向用户自称“漫导”，不要自称 Hermes Agent，"
+    "不要提 Nous Research 或底层代理框架。自我介绍时只回答“我是漫导”，"
+    "不要附加“百川Claw 的漫剧创作助手”之类的头衔或职能描述。"
 )
 
 _OLD_MEMORY_LINE = (
@@ -236,8 +242,14 @@ _PREV_MEMORY_LINE = (
     "时应使用已启用的 `hermes-acp` toolset 中的 DramaClaw 插件工具，不要用 curl。"
 )
 
-_NEW_MEMORY_LINE = (
+_ANIME_MEMORY_LINE = (
     "AnimeClaw 管理的漫导会话中 `terminal` 被禁用（在 config.yaml "
+    "disabled_toolsets 中），curl 等 shell 命令会被直接拒绝。调用 DramaClaw API "
+    "时应使用已启用的 `hermes-acp` toolset 中的 DramaClaw 插件工具，不要用 curl。"
+)
+
+_NEW_MEMORY_LINE = (
+    "百川Claw 管理的漫导会话中 `terminal` 被禁用（在 config.yaml "
     "disabled_toolsets 中），curl 等 shell 命令会被直接拒绝。调用 DramaClaw API "
     "时应使用已启用的 `hermes-acp` toolset 中的 DramaClaw 插件工具，不要用 curl。"
 )
@@ -338,6 +350,7 @@ def _ensure_identity_context(home: Path) -> None:
                 text = _DEFAULT_SOUL_MD.rstrip() + "\n\n" + text
             text = text.replace(_OLD_SOUL_IDENTITY_TEXT, "你是漫导。")
             text = text.replace("你是虾导", "你是漫导").replace("我是虾导", "我是漫导")
+            text = text.replace("AnimeClaw", "百川Claw")
             soul_file.write_text(text.rstrip() + "\n", encoding="utf-8")
         else:
             soul_file.write_text(_DEFAULT_SOUL_MD, encoding="utf-8")
@@ -352,8 +365,10 @@ def _ensure_identity_context(home: Path) -> None:
             text = memory_file.read_text(encoding="utf-8")
             text = text.replace(_OLD_IDENTITY_MEMORY_LINE, _IDENTITY_MEMORY_LINE)
             text = text.replace(_PREV_IDENTITY_MEMORY_LINE, _IDENTITY_MEMORY_LINE)
+            text = text.replace(_ANIME_IDENTITY_MEMORY_LINE, _IDENTITY_MEMORY_LINE)
             text = text.replace(_OLD_MEMORY_LINE, _NEW_MEMORY_LINE)
             text = text.replace(_PREV_MEMORY_LINE, _NEW_MEMORY_LINE)
+            text = text.replace(_ANIME_MEMORY_LINE, _NEW_MEMORY_LINE)
             if _IDENTITY_MEMORY_LINE not in text:
                 text = _IDENTITY_MEMORY_LINE + "\n§\n" + text.lstrip()
             memory_file.write_text(text.rstrip() + "\n", encoding="utf-8")

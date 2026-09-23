@@ -16,10 +16,14 @@ function branding(updatedAt: string) {
 }
 
 describe("BrandLockup", () => {
-  it("always shows AnimeClaw and renders organization branding only at xl", () => {
+  it("always shows 百川AI漫剧 mark + wordmark and renders organization branding only at xl", () => {
     const { container } = render(<BrandLockup value={branding("2026-08-21T10:00:00Z")} />);
-    expect(container.querySelector('img[src="/brand/animeclaw-mark.svg"]')).not.toBeNull();
-    expect(container.querySelector(".animeclaw-wordmark__name")?.textContent).toBe("AnimeClaw");
+    expect(container.querySelector('img[src="/brand/logo.png"]')).not.toBeNull();
+    expect(container.querySelector('img[src="/brand/logo_txt.png"]')).not.toBeNull();
+    expect(container.querySelector('img[src="/brand/logo_txt.png"]')).toHaveAttribute(
+      "alt",
+      "百川AI漫剧",
+    );
     const organization = screen.getByTestId("organization-brand");
     const logo = organization.querySelector("img");
     expect(logo).toHaveAttribute("src", logoUrl);

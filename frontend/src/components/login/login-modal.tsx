@@ -81,9 +81,9 @@ export function LoginModal({ open, onClose }: LoginModalProps) {
             <section className={styles.loginPanel}>
               <div className={styles.loginPanelInner}>
                 <header className={styles.loginPanelHeader}>
-                  <span className="animeclaw-wordmark" aria-label="AnimeClaw">
-                    <img className="animeclaw-wordmark__mark-img" src="/brand/animeclaw-mark.svg" alt="" />
-                    <span className="animeclaw-wordmark__name">AnimeClaw</span>
+                  <span className="animeclaw-wordmark" aria-label="百川AI漫剧">
+                    <img className="animeclaw-wordmark__mark-img" src="/brand/logo.png" alt="" />
+                    <img className="animeclaw-wordmark__text-img" src="/brand/logo_txt.png" alt="百川AI漫剧" />
                   </span>
                   <h2 className={styles.loginPanelTitle}>{t("auth.modal.title")}</h2>
                   <p className={styles.loginPanelSubtitle}>{t("auth.modal.subtitle")}</p>

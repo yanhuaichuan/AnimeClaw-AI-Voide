@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Elastic-2.0
 # Copyright (c) 2026 yanhuaichuan
-"""File-backed AnimeClaw store under ``{state_dir}/anime/``."""
+"""File-backed 百川Claw store under ``{state_dir}/anime/``."""
 
 from __future__ import annotations
 

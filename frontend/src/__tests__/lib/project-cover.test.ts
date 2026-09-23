@@ -38,6 +38,12 @@ describe("getProjectCover", () => {
     expect(PROJECT_COVER_PALETTE).toHaveLength(8);
   });
 
+  it("stays in the sci-tech family", () => {
+    for (const stop of PROJECT_COVER_PALETTE) {
+      expect(stop.name).not.toMatch(/teal|emerald|amber|ember|peach|cream|coral|rust|sienna/i);
+    }
+  });
+
   it("exports an SVG noise data URI", () => {
     expect(NOISE_DATA_URI.startsWith("data:image/svg+xml")).toBe(true);
     expect(NOISE_DATA_URI).toContain("feTurbulence");

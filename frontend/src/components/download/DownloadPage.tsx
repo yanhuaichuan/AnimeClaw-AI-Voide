@@ -202,13 +202,9 @@ export function DownloadPage() {
     <div className={styles.page} ref={pageRef}>
       <header className={styles.top}>
         <div className={styles.topInner}>
-          <a className={styles.brand} href="#top" aria-label="AnimeClaw">
-            <img className={styles.brandMark} src="/brand/animeclaw-mark.svg" alt="" aria-hidden="true" />
-            <img
-              className={styles.brandWordmark}
-              src="/brand/animeclaw-wordmark.svg"
-              alt="AnimeClaw"
-            />
+          <a className={styles.brand} href="#top" aria-label="百川AI漫剧">
+            <img className={styles.brandMark} src="/brand/logo.png" alt="" aria-hidden="true" />
+            <img className={styles.brandWordmark} src="/brand/logo_txt.png" alt="百川AI漫剧" />
           </a>
           <nav className={styles.topNav}>
             <a href="#capability">{t("downloadPage.nav.capability")}</a>
@@ -226,12 +222,10 @@ export function DownloadPage() {
         <div className={styles.hero}>
           <div className={clsx(styles.wrap, styles.heroInner)}>
             <div className={styles.heroLead}>
-              <img
-                className={clsx(styles.heroWordmark, styles.rise)}
-                data-reveal=""
-                src="/brand/animeclaw-wordmark.png"
-                alt="AnimeClaw 漫剧工厂"
-              />
+              <div className={clsx(styles.heroWordmark, styles.rise)} data-reveal="">
+                <img src="/brand/logo.png" alt="" aria-hidden="true" />
+                <img src="/brand/logo_txt.png" alt="百川AI漫剧" />
+              </div>
 
               {/* slogan 与登录页共用同一批 auth.stage.* 键,两处永远同步。 */}
               <h1 className={clsx(styles.heroTitle, styles.rise)} data-reveal="">
@@ -449,11 +443,19 @@ export function DownloadPage() {
       <footer className={styles.footer}>
         <div className={styles.wrap}>
           <div className={styles.footerRow}>
-            <img
-              className={styles.footerWordmark}
-              src="/brand/animeclaw-wordmark.svg"
-              alt="AnimeClaw"
-            />
+            <div className={styles.footerBrand}>
+              <img
+                className={styles.footerMark}
+                src="/brand/logo.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                className={styles.footerWordmark}
+                src="/brand/logo_txt.png"
+                alt="百川AI漫剧"
+              />
+            </div>
             <nav className={styles.footerLinks}>
               <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
                 GitHub

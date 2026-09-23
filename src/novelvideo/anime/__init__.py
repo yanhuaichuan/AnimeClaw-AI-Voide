@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Elastic-2.0
 # Copyright (c) 2026 yanhuaichuan
-"""AnimeClaw domain layer on top of DramaClaw core.
+"""百川Claw domain layer on top of DramaClaw core.
 
 File-backed story / character / shot continuity. Does not replace the generic
 pipeline — it extends project state under ``{state_dir}/anime/``.

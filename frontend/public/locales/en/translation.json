@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "AnimeClaw",
+    "title": "百川Claw",
     "subtitle": "Manga factory — keep the same character alive across dozens of episodes",
     "updateRequired": {
       "title": "App updated",
@@ -73,8 +73,8 @@
       "eyebrow": "Interface",
       "title": "A guided pipeline and a free-form canvas",
       "lede": "The mainline breaks a novel into episodes, characters, storyboards, first frames, video, and the final cut, one page per step. The canvas projects any of those shots onto a node graph where you can rework them freely and sync the result back. Both sides read from the same assets.",
-      "windowTitle": "AnimeClaw — Episode 03 · Canvas",
-      "alt": "Sketch of the AnimeClaw desktop canvas: episode tabs across the top, shot outline on the left, node canvas in the middle, parameter panel on the right.",
+      "windowTitle": "百川Claw — Episode 03 · Canvas",
+      "alt": "Sketch of the 百川Claw desktop canvas: episode tabs across the top, shot outline on the left, node canvas in the middle, parameter panel on the right.",
       "caption": "Illustration (canvas view)"
     },
     "capability": {
@@ -140,7 +140,7 @@
       },
       "v120": {
         "title": "Transparent feature credits, external agents welcome",
-        "description": "Feature prices, estimated charges, and usage history live in one place, and local agents such as Claude Code can drive AnimeClaw CE over MCP."
+        "description": "Feature prices, estimated charges, and usage history live in one place, and local agents such as Claude Code can drive 百川Claw CE over MCP."
       }
     },
     "faq": {
@@ -149,7 +149,7 @@
       "items": {
         "macGatekeeper": {
           "question": "macOS says the developer cannot be verified. Now what?",
-          "answer": "Find AnimeClaw in Finder → Applications, Control-click the icon, choose Open, then confirm with Open in the dialog. You only do this once; after that it launches normally."
+          "answer": "Find 百川Claw in Finder → Applications, Control-click the icon, choose Open, then confirm with Open in the dialog. You only do this once; after that it launches normally."
         },
         "winSmartScreen": {
           "question": "Windows says it protected my PC. Now what?",
@@ -864,7 +864,7 @@
     "anime": "Anime Studio"
   },
   "anime": {
-    "productEn": "AnimeClaw",
+    "productEn": "百川Claw",
     "productZh": "Manga Factory",
     "timeline": "Shot timeline",
     "nav": {
@@ -966,7 +966,7 @@
     },
     "empty": {
       "title": "First, keep one person across 10 shots",
-      "body": "This is the AnimeClaw bar: face, hair, dress, red cord, earrings stay put. Seed the Su Li demo below.",
+      "body": "This is the 百川Claw bar: face, hair, dress, red cord, earrings stay put. Seed the Su Li demo below.",
       "cta": "Seed 10-shot demo"
     },
     "characters": {
@@ -1317,7 +1317,7 @@
       "subtitle": "Continue your stories, assets, and shots",
       "noAccount": "Need an account?",
       "applyAccount": "Request access",
-      "showcaseLabel": "AnimeClaw showcase",
+      "showcaseLabel": "百川Claw showcase",
       "showcaseEyebrow": "MADE WITH DRAMACLAW",
       "showcaseMeta": "Production in motion",
       "showcaseTitle": "Imagination, rolling at full speed",
@@ -1359,7 +1359,7 @@
     },
     "community": {
       "label": "Community works",
-      "heading": "AnimeClaw TV",
+      "heading": "百川Claw TV",
       "likes": "{{count}} likes",
       "openWork": "Open work \"{{title}}\"",
       "works": {
@@ -1436,7 +1436,7 @@
     "noProjects": "No projects yet. Click to create one.",
     "dashboardTitle": "Project Management Center",
     "dashboardReturn": "Back to Project Management",
-    "dashboardSubtitle": "Manage your drama productions and scripts.",
+    "dashboardSubtitle": "Character bible, shots, and continuity — start here.",
     "emptyTitle": "Start your first story",
     "emptyDescription": "Create a project to begin scripting, generating sketches, and producing episodes.",
     "heroTitle": "Start your creative journey",
@@ -1925,7 +1925,7 @@
     "novelFormat": {
       "button": "Premium drama format guide",
       "title": "Premium drama format",
-      "intro": "Premium drama scripts need explicit episode and scene boundaries. AnimeClaw splits the script by scene headers before generating visuals, dialogue, and audio line by line; it does not invent scene breaks for headerless prose.",
+      "intro": "Premium drama scripts need explicit episode and scene boundaries. 百川Claw splits the script by scene headers before generating visuals, dialogue, and audio line by line; it does not invent scene breaks for headerless prose.",
       "standardStatus": "Standard · ready to import",
       "standardStatusHint": "Several industry formats are supported. Complete location, time, and INT/EXT metadata can be parsed reliably.",
       "warningStatus": "Repairable · import allowed",
@@ -3278,6 +3278,7 @@
     "createStyle": "Create Style",
     "projectDefault": "Project default",
     "preset": "Preset",
+    "baichuanMark": "百川",
     "custom": "Custom",
     "customPreviewEmpty": "No uploaded reference image",
     "uploadedPreview": "Uploaded reference preview",
@@ -4539,7 +4540,7 @@
         "mediaCatalogCheckFailed": "Could not check the official media model catalog. Try again later."
       },
       "custom": {
-        "description": "CE uses a local SQLite-backed NewAPI. AnimeClaw connects the database, creates a runtime token, and enables the local channel automatically.",
+        "description": "CE uses a local SQLite-backed NewAPI. 百川Claw connects the database, creates a runtime token, and enables the local channel automatically.",
         "init": "Initialize Local NewAPI",
         "repair": "Check & Repair",
         "initialized": "Local NewAPI is ready.",
@@ -4558,7 +4559,7 @@
         "setupConfirmPassword": "Confirm Password",
         "setupPasswordPlaceholder": "At least 8 characters",
         "setupConfirmPasswordPlaceholder": "Enter it again",
-        "setupPasswordOnlyOnce": "This username and password are sent to your NewAPI instance only when creating the first admin on a fresh NewAPI install. If NewAPI is already initialized, entering a password here will not change the existing admin password. AnimeClaw does not save the password or use it for later operations; keep it for logging into the NewAPI admin console after first-time setup.",
+        "setupPasswordOnlyOnce": "This username and password are sent to your NewAPI instance only when creating the first admin on a fresh NewAPI install. If NewAPI is already initialized, entering a password here will not change the existing admin password. 百川Claw does not save the password or use it for later operations; keep it for logging into the NewAPI admin console after first-time setup.",
         "setupRequired": "Local NewAPI has not been initialized yet. Enter the setup password and confirmation, then try again.",
         "setupAlreadyInitializedPasswordIgnored": "Your NewAPI instance is already initialized. This run did not call the NewAPI setup endpoint and did not change the existing admin password; the password you entered was ignored and cleared.",
         "setupPasswordMissingUsername": "Enter the admin username.",

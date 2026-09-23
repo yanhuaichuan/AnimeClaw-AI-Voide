@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "supertale-ce"
 version = "2.0.1"
-description = "AnimeClaw — DramaClaw-based anime drama studio (漫剧工厂)"
+description = "百川Claw — DramaClaw-based anime drama studio (漫剧工厂)"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
 license = "Elastic-2.0"

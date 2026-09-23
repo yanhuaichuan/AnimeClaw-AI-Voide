@@ -199,7 +199,7 @@ def export_episode(store: AnimeStore, episode: int) -> dict:
     issues = ContinuityEngine().check_episode(store, episode)
     qa = AnimeQA().score(store, episode)
     payload = {
-        "product": "AnimeClaw",
+        "product": "百川Claw",
         "author": "yanhuaichuan",
         "exported_at": datetime.now(timezone.utc).isoformat(),
         "world": store.load_world().model_dump(),

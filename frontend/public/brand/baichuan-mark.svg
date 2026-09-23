@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="BaiChuan Claw">
+  <defs>
+    <linearGradient id="bc-ink" x1="16" y1="12" x2="52" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7A3D"/>
+      <stop offset=".5" stop-color="#FF5C1A"/>
+      <stop offset="1" stop-color="#E03E08"/>
+    </linearGradient>
+  </defs>
+  <!-- Soft cream face + orange 川 claw — orange-white, not orange brick -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="16" fill="#FFF8F2"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="16" fill="none" stroke="#FF5C1A" stroke-opacity=".18" stroke-width="1.5"/>
+  <g fill="none" stroke="url(#bc-ink)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 19.5c.2 7.5-.6 14.5.2 24.5" stroke-width="4.8"/>
+    <path d="M32 14.5c1.2 9.5-.8 17.5.4 34" stroke-width="5.2"/>
+    <path d="M43.5 19.5c.4 8.2-.6 14.2.8 21.2 1.4 6.2 8.8 8.8 13.2 3.2" stroke-width="4.8"/>
+  </g>
+</svg>

@@ -128,7 +128,7 @@ def test_export_and_cost_and_qa(tmp_path: Path) -> None:
     store = AnimeStore(tmp_path)
     seed_ten_shot_demo(store)
     payload = export_episode(store, 1)
-    assert payload["product"] == "AnimeClaw"
+    assert payload["product"] == "百川Claw"
     assert payload["author"] == "yanhuaichuan"
     assert len(payload["shots"]) == 10
     qa = AnimeQA().score(store, 1)

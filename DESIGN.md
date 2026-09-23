@@ -1,53 +1,53 @@
 ---
 version: alpha
-name: AnimeClaw
+name: 百川Claw
 description: >-
-  AnimeClaw 漫剧工厂的视觉规范：暗色优先、信息密集的工作台，樱色强调。
+  百川AI漫剧 视觉规范：科技深蓝驾驶舱，电青强调、紫罗兰辉光。
   token 逐值对齐 frontend/src/index.css；以暗色为准，亮色值以 light-* 前缀并行。
 colors:
   # ── 画布 / freezone 表面（来源：index.css 的 --*-rgb，.dark 块）──
-  background: "#0c0814"
-  surface: "#17111f"
-  surface-panel: "#1a1326"
-  surface-modal: "#22182e"
-  surface-field: "#100c18"
-  border-soft: "#2a2038"
-  border-strong: "#3d2f52"
-  border: "#2e243c"
-  text: "#f4eef8"
-  text-muted: "#9a8eab"
-  accent: "#ff7ab6"
-  # ── shadcn 语义层（来源：.dark 块的 oklch 值）──
-  primary: "#ff6b9d"
-  primary-foreground: "#1a0d16"
-  secondary: "#3a1f3a"
-  foreground: "#f4eef8"
-  card: "#24182f"
-  muted: "#1a1224"
-  muted-foreground: "#b09cbc"
-  ui-border: "#3a2d4a"
-  sidebar: "#120c1a"
+  background: "#07091a"
+  surface: "#10132a"
+  surface-panel: "#10132a"
+  surface-modal: "#121630"
+  surface-field: "#0a0c1c"
+  border-soft: "#2a3158"
+  border-strong: "#3d4a7a"
+  border: "#2a3158"
+  text: "#e8f4ff"
+  text-muted: "#b4c2dc"
+  accent: "#00d2ff"
+  # ── shadcn 语义层（来源：.dark 块）──
+  primary: "#00d2ff"
+  primary-foreground: "#06101c"
+  secondary: "#1a1f3d"
+  foreground: "#e8f4ff"
+  card: "#10132a"
+  muted: "#121630"
+  muted-foreground: "#b4c2dc"
+  ui-border: "#2a3158"
+  sidebar: "#060814"
   destructive: "#ea4335"
   success: "#51bf6f"
-  warning: "#efa831"
-  chart-1: "#ff6b9d"
-  chart-2: "#c084fc"
-  chart-3: "#fb7185"
-  chart-4: "#f472b6"
-  chart-5: "#a78bfa"
-  # ── 亮色主题（来源：:root 块）——角色相同，取值更亮 ──
-  light-background: "#ffffff"
-  light-surface: "#fafafa"
-  light-border: "#e5e5e5"
-  light-text: "#171717"
-  light-text-muted: "#52525b"
-  light-accent: "#e11d74"
-  light-primary: "#c2185b"
-  light-foreground: "#171717"
+  warning: "#fff000"
+  chart-1: "#00d2ff"
+  chart-2: "#7042ff"
+  chart-3: "#ff00e5"
+  chart-4: "#fff000"
+  chart-5: "#6366f1"
+  # ── 亮色主题（来源：:root 块）──
+  light-background: "#f4f7ff"
+  light-surface: "#ffffff"
+  light-border: "#d5def2"
+  light-text: "#0b1026"
+  light-text-muted: "#4b5678"
+  light-accent: "#2563eb"
+  light-primary: "#2563eb"
+  light-foreground: "#0b1026"
   light-card: "#ffffff"
-  light-muted: "#f4f4f5"
-  light-muted-foreground: "#52525b"
-  light-ui-border: "#e5e5e5"
+  light-muted: "#e8eefc"
+  light-muted-foreground: "#4b5678"
+  light-ui-border: "#d5def2"
 typography:
   display-lg:
     fontFamily: Inter
@@ -150,7 +150,7 @@ components:
     typography: "{typography.label-md}"
     rounded: "{rounded.full}"
   button-quiet-primary-hover:
-    backgroundColor: "#3a1f3a"
+    backgroundColor: "#3a2418"
     textColor: "{colors.accent}"
   button-primary:
     backgroundColor: "{colors.primary}"
@@ -166,7 +166,7 @@ components:
     rounded: "{rounded.full}"
     padding: 2px 10px
   chip-active:
-    backgroundColor: "#3a1f3a"
+    backgroundColor: "#3a2418"
     textColor: "{colors.accent}"
   field:
     backgroundColor: "{colors.surface-field}"
@@ -257,7 +257,7 @@ components:
     rounded: "{rounded.full}"
 ---
 
-# AnimeClaw DESIGN.md
+# 百川Claw DESIGN.md
 
 本文件是 `frontend/src/index.css` 的机读镜像。CSS 变量一改，本文件必须同 commit 更新——
 靠 `npx @google/design.md diff` 跟上一版比对，才能抓出视觉回归。
@@ -267,17 +267,17 @@ components:
 
 ## Overview
 
-AnimeClaw（漫剧工厂）是漫剧工作台：角色圣经、分镜、连续性、任务队列。
-用户是会把工具开一整天的创作者，所以 UI 定性为**暗色优先、信息密集、克制，但带樱色漫剧气质**——
-`theme: 'dark'` 是持久化的默认值，亮色是受支持的备选，不是主战场。
+百川Claw（漫剧工厂）是漫剧工作台：角色圣经、分镜、连续性、任务队列。
+用户是会把工具开一整天的创作者，所以 UI 定性为**科技深蓝驾驶舱、信息密集、克制发光**——
+`theme: 'dark'` 是持久化的默认值，亮色是备选。
 
-调性是「漫画工作台，不是海报」。界面外壳退到墨黑半透明玻璃里；一屏之内唯一的高饱和色，
-只属于用户正在操作的那个东西，并且统一为樱粉/品红，不再同时使用青与蓝。
+调性是「漫剧工厂控制台，不是海报」。界面落在深海军蓝上；一屏之内唯一的高饱和色是电青，
+辅以紫罗兰辉光。品牌标用提供的涡旋圆形标与「百川AI漫剧」字标。
 密集是刻意的：12px 是主力字号，4–8px 是主力间距。
 动效短促且减速——表面是「落定」，绝不回弹。
 
-明确不要的东西：多强调色打架、俏皮的回弹缓动、把工作台做成营销落地页。
-漫剧工作台允许一层很淡的速度线底纹，但不得压过正文对比度。
+明确不要的东西：多强调色打架、俏皮的回弹缓动、把工作台做成营销落地页、暖橙/奶油主题。
+漫剧工作台允许一层很淡的数字噪点底纹，但不得压过正文对比度。
 
 以上以及本文件其余全部规则，适用范围是**登录之后的产品界面**。未登录就能访问的对外落地页
 （下载页、登录页）是一小块有意划出的例外，边界写在 Scope & Exceptions 里。
@@ -286,13 +286,13 @@ AnimeClaw（漫剧工厂）是漫剧工作台：角色圣经、分镜、连续�
 
 两套色板共存，但**同一个表面上不得混用**：
 
-- **画布色板**（`background` #0c0814 → `surface` #17111f → `border` #2e243c，
-  文字 `text` #f4eef8 / `text-muted` #9a8eab，强调色 `accent` #ff7ab6）。
+- **画布色板**（`background` #0f0f10 → `surface` #18181a → `border` #3a3a3e，
+  文字 `text` #fafafa / `text-muted` #a8a8ae，强调色 `accent` #ff6b2c）。
   驱动 freezone 画布、节点主体、悬浮工具条，以及所有 `.tap-*` / `.ui-*` 类。
   取值以空格分隔的 RGB 三元组形式存放（`--bg-rgb`），便于叠加 alpha：
   `rgb(var(--accent-rgb) / 0.22)`。
-- **shadcn 语义色板**（`primary` #ff6b9d 樱粉、`card` #24182f、
-  `muted-foreground` #b09cbc、`ui-border` #3a2d4a，外加 `destructive` / `success` /
+- **shadcn 语义色板**（`primary` #ff6b2c 橙、`card` #1c1c1e、
+  `muted-foreground` #a8a8ae、`ui-border` #3a3a3e，外加 `destructive` / `success` /
   `warning`）。驱动 shadcn 原语——弹窗、下拉、Tab、表单——用 `oklch()` 书写以保证
   感知均匀。
 
@@ -300,14 +300,14 @@ AnimeClaw（漫剧工厂）是漫剧工作台：角色圣经、分镜、连续�
 
 - 语义状态色两套色板共用：`destructive` #ea4335 表示危险与失败，`success` #51bf6f
   表示完成，`warning` #efa831 表示降级或额度受限。**不要再造第二个红。**
-- `accent`（樱粉）和 `primary`（品红）是**同一色相家族的两档**，不是两套品牌色。
-  画布表面用 `accent`，shadcn 原语用 `primary`。按「表面归属哪套色板」来选，不要另起青色。
-- 静止表面上彩度必须低。shadcn 的 `secondary` / `accent` 是带品红调的灰
-  （暗色 #3a1f3a），正是为了让下拉和 Tab 的 hover 态足够安静。
-- 亮色模式把 `background` 翻成干净白 #ffffff、`text` 翻成近黑 #171717，强调色仍用 `light-accent` #e11d74；
-  `card` 与页面同为纯白，节点等次级表面用极浅灰 `light-surface` #fafafa，避免粉灰脏感。
-- `chart-1` … `chart-5` 是唯一批准的数据序列色，走「樱 → 紫 → 玫 → 粉 → 堇」，
-  保证同一色系不重复出现。
+- `accent`（橙）和 `primary`（橙）是**同一色相家族的两档**，不是两套品牌色。
+  画布表面用 `accent`，shadcn 原语用 `primary`。按「表面归属哪套色板」来选，不要另起青绿或暖墨棕。
+- 静止表面上彩度必须低。shadcn 的 `secondary` / `accent` 是中性灰
+  （暗色 #2a2a2e），正是为了让下拉和 Tab 的 hover 态足够安静。
+- 亮色模式把 `background` 翻成干净白 #ffffff、`text` 翻成近黑 #171717，强调色仍用 `light-accent` #ea580c；
+  `card` 与页面同为纯白，节点等次级表面用极浅灰 `light-surface` #fafafa，避免脏橙灰。
+- `chart-1` … `chart-5` 是唯一批准的数据序列色，走「橙 → 米白 → 珊瑚 → 杏 → 锈」，
+  保证橙白对比不重复出现。
 
 ## Typography
 
@@ -347,11 +347,11 @@ AnimeClaw（漫剧工厂）是漫剧工作台：角色圣经、分镜、连续�
 层次来自**近黑底上的半透明玻璃**，不是靠堆阴影。每个悬浮表面都是：
 半透明填充 + 1px 细边 + 一层柔和阴影。
 
-- **Level 0 — 底场：** `background` #0c0814。不透明，永不模糊。
+- **Level 0 — 底场：** `background` #0f0f10。不透明，永不模糊。
 - **Level 1 — 节点 / 内联表面：** `surface-panel`，细边 `border-soft`
   （`rgba(255,255,255,0.05)`），不加模糊。
 - **Level 2 — 悬浮面板**（`.tap-panel` / `.ui-panel`）：
-  `background: rgba(23,17,31,0.82)`、`border-soft`，以及
+  `background: rgba(28,18,12,0.82)`、`border-soft`，以及
   `--ui-shadow-panel` = `0 14px 34px rgba(0,0,0,0.5)` 加一道
   `0 1px 0 rgba(255,255,255,0.03) inset` 顶部高光。压在画布上时配 `.backdrop-blur-tap`
   （`saturate(180%) blur(18px)`）。
@@ -390,7 +390,7 @@ Tailwind 的 `rounded-md` 是 14px，不是 6px。不要写死圆角，引用这
 并加上强调色发光——它仍然是一个安静按钮。禁用态是 `opacity: 0.4` 加
 `cursor: not-allowed`；不要再单独把标签置灰。
 
-**实心按钮**（shadcn `button-primary`，近黑底上的青）每屏最多一个：表单或弹窗的提交动作。
+**实心按钮**（shadcn `button-primary`，近黑底上的橙）每屏最多一个：表单或弹窗的提交动作。
 画布上优先用安静主操作按钮。
 
 **Chip**（`.tap-chip`）是带弱化文字的胶囊；`data-state="active"` 时文字翻成 `accent`，
@@ -406,15 +406,15 @@ Tailwind 的 `rounded-md` 是 14px，不是 6px。不要写死圆角，引用这
 绝不用投影——那读起来像正在拖拽。
 
 **Popover / 下拉 / tooltip** 用不透明的 `card` 表面配 `ui-border`、16px 圆角，
-hover 行用 shadcn 的 `accent`（#0e333c）——刻意不用画布的蓝强调色，
+hover 行用 shadcn 的 `accent`（#3a2418）——刻意不用画布的橙强调色，
 因为它们渲染在语义色板里。
 
 ## Do's and Don'ts
 
 - **要**从 `frontend/src/index.css` 的 CSS 变量里读颜色、圆角、间距、动效。
   **不要**在组件里写死 hex、px 圆角或 ms 时长——写死字面量正是两套色板开始漂移的方式。
-- **要**按「表面归属哪套色板」决定用樱粉还是品红（画布 → `accent` 樱粉，shadcn 原语 →
-  `primary` 品红）。**不要**再引入青色或第三强调色。
+- **要**按「表面归属哪套色板」决定用强调橙还是主橙（画布 → `accent` 橙，shadcn 原语 →
+  `primary` 橙）。**不要**再引入青绿、暖墨棕或第三强调色。
 - **要**保证一屏只有一个高饱和元素。**不要**把实心主按钮、激活 chip、发光节点堆在一起——
   眼睛会找不到主体。
 - **要**用 `rgb(var(--x-rgb) / a)` 合成半透明，这样一条声明同时适配两种主题。

@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository contains AnimeClaw (漫剧工厂), a DramaClaw-based anime-drama studio. Python source lives under `src/novelvideo/`, with major areas such as `api/` for FastAPI routes, `anime/` for Character Bible / continuity / manga camera, `task_backend/` for job execution, `generators/` for media generation, `verification/` for quality gates, `ports/` for interface boundaries, and `assets/` for bundled media. Tests live in `tests/`, with contract tests in `tests/contract/` and port-focused tests in `tests/ports/`. Operational scripts are in `scripts/`, documentation in `docs/`, examples in `examples/`, and compliance artifacts in `docs/compliance/`, `LICENSES/`, and `sbom.spdx.json`.
+This repository contains 百川Claw (漫剧工厂), a DramaClaw-based anime-drama studio. Python source lives under `src/novelvideo/`, with major areas such as `api/` for FastAPI routes, `anime/` for Character Bible / continuity / manga camera, `task_backend/` for job execution, `generators/` for media generation, `verification/` for quality gates, `ports/` for interface boundaries, and `assets/` for bundled media. Tests live in `tests/`, with contract tests in `tests/contract/` and port-focused tests in `tests/ports/`. Operational scripts are in `scripts/`, documentation in `docs/`, examples in `examples/`, and compliance artifacts in `docs/compliance/`, `LICENSES/`, and `sbom.spdx.json`.
 
 ## Build, Test, and Development Commands
 

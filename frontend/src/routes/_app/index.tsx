@@ -7,7 +7,6 @@ import { toast } from "sonner";
 import { motion } from "framer-motion";
 import {
   ArchiveRestore,
-  BookOpen,
   Brush,
   FolderOpen,
   LayoutGrid,
@@ -103,7 +102,9 @@ const SORT_OPTIONS: { value: SortKey; labelKey: string }[] = [
 
 const PROJECT_NAME_PATTERN = /^[A-Za-z0-9_\u4e00-\u9fff\u3400-\u4dbf]{1,64}$/;
 
-const PROJECT_CARD_MIN_HEIGHT_CLASS = "min-h-[12.75rem]";
+const PROJECT_CARD_MIN_HEIGHT_CLASS = "min-h-[14.5rem]";
+const DASHBOARD_CARD_GRID_CLASS =
+  "grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5";
 const RECENTLY_CREATED_PROJECT_KEY = "supertale-dashboard-recent-created-project";
 
 function readRecentlyCreatedProject(): string | null {
@@ -228,11 +229,11 @@ function ProjectCard({
       role={clickable ? "button" : undefined}
       tabIndex={clickable ? 0 : undefined}
       className={cn(
-        "group relative flex h-full flex-col rounded-lg border border-border/65 bg-card/50 transition-all duration-300 ease-out",
+        "group relative flex h-full flex-col rounded-2xl border border-primary/15 bg-card/90 shadow-[0_0_0_1px_rgb(0_210_255_/_0.04)] transition-all duration-300 ease-out",
         PROJECT_CARD_MIN_HEIGHT_CLASS,
-        sm ? "p-2 pt-4" : "p-3 pt-5",
+        sm ? "p-2 pt-4" : "p-3.5 pt-5",
         clickable &&
-          "cursor-pointer hover:border-foreground/15 hover:bg-card/65 hover:shadow-lg hover:shadow-black/10",
+          "cursor-pointer hover:border-primary/40 hover:shadow-[0_0_28px_rgb(0_210_255_/_0.12)]",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60",
         isArchived && "opacity-70",
         isDeleted && "opacity-50",
@@ -241,7 +242,7 @@ function ProjectCard({
       <div className="mx-auto flex w-full flex-col">
         <div
           className={cn(
-            "project-cover relative mx-auto mb-3 flex aspect-[16/10] w-[90%] items-end justify-center overflow-visible rounded-lg pb-1",
+            "project-cover relative mx-auto mb-3 flex aspect-[16/10] w-[90%] items-end justify-center overflow-visible rounded-xl bg-gradient-to-b from-primary/[0.12] to-transparent pb-1",
             isDeleted && "grayscale",
           )}
         >
@@ -442,16 +443,21 @@ function CreateProjectCard({ onCreate }: { onCreate: () => void }) {
       type="button"
       onClick={onCreate}
       className={cn(
-        "group flex h-full w-full flex-col items-center justify-center rounded-lg border border-white/10 bg-transparent p-3 text-center text-muted-foreground transition-all duration-300 ease-out",
+        "group flex h-full w-full flex-col rounded-2xl border border-dashed border-primary/35 bg-primary/[0.06] p-3.5 pt-5 text-left transition-all duration-300 ease-out",
         PROJECT_CARD_MIN_HEIGHT_CLASS,
-        "hover:border-white/15 hover:bg-white/[0.03] hover:shadow-lg hover:shadow-black/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60",
+        "hover:border-primary/55 hover:bg-primary/[0.1] hover:shadow-[0_0_28px_rgb(0_210_255_/_0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60",
       )}
     >
-      <Plus
-        className="mb-3 size-7 stroke-[1px] text-white/70 transition-colors group-hover:text-foreground"
-        aria-hidden="true"
-      />
-      <span className="text-sm font-normal text-white/70 transition-colors group-hover:text-foreground">
+      <div className="mx-auto mb-3 flex aspect-[16/10] w-[90%] items-end justify-center overflow-visible">
+        <ProjectFolder
+          color="#3B82F6"
+          initial="+"
+          width="100%"
+          size={1}
+          className="translate-y-1 opacity-90 transition-opacity group-hover:opacity-100"
+        />
+      </div>
+      <span className="ml-[5%] text-sm font-medium text-foreground/90 transition-colors group-hover:text-foreground">
         {t("project.createCard")}
       </span>
     </button>
@@ -474,7 +480,7 @@ function DashboardTabStrip({
     { value: "deleted", label: t("project.statusDeleted") },
   ];
   return (
-    <div className="inline-flex h-8 items-center rounded-full border border-border bg-background/40 p-1 text-xs">
+    <div className="inline-flex h-8 items-center rounded-full border border-primary/20 bg-card/70 p-1 text-xs backdrop-blur-sm">
       {tabs.map((tab) => {
         const active = current === tab.value;
         return (
@@ -485,8 +491,8 @@ function DashboardTabStrip({
             className={cn(
               "inline-flex h-6 items-center gap-1.5 rounded-full px-3 font-normal transition-colors",
               active
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground",
+                ? "bg-primary text-primary-foreground shadow-[0_0_16px_rgb(0_210_255_/_0.28)]"
+                : "text-foreground/85 hover:text-foreground",
             )}
           >
             <span>{tab.label}</span>
@@ -495,7 +501,7 @@ function DashboardTabStrip({
                 "rounded-full px-1.5 text-xs tabular-nums",
                 active
                   ? "bg-primary-foreground/15 text-primary-foreground"
-                  : "bg-accent text-muted-foreground",
+                  : "bg-white/12 text-foreground/75",
               )}
             >
               {counts[tab.value]}
@@ -572,9 +578,9 @@ function ProjectRow({
       role={clickable ? "button" : undefined}
       tabIndex={clickable ? 0 : undefined}
       className={cn(
-        "group flex items-center gap-3 rounded-lg border border-border/65 bg-card/50 px-3.5 py-3 transition-colors",
+        "group flex items-center gap-3 rounded-2xl border border-border/70 bg-card px-3.5 py-3 shadow-[0_1px_2px_rgba(23,23,23,0.04)] transition-colors",
         clickable &&
-          "cursor-pointer hover:border-foreground/15 hover:bg-card/65",
+          "cursor-pointer hover:border-primary/30 hover:bg-muted/40",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60",
         isArchived && "opacity-70",
         isDeleted && "opacity-50",
@@ -597,7 +603,7 @@ function ProjectRow({
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <span
-            className="text-lg font-bold leading-none text-white/68 drop-shadow-[0_1px_6px_rgba(0,0,0,0.32)]"
+            className="text-lg font-bold leading-none text-white/85 drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]"
             style={{ fontFeatureSettings: '"cv01", "ss03"' }}
           >
             {initial}
@@ -792,7 +798,7 @@ function ViewToggle({
     <div
       role="tablist"
       aria-label={t("project.view.toggle")}
-      className="inline-flex h-8 items-center rounded-full border border-border bg-background/40 p-1 text-xs"
+      className="inline-flex h-8 items-center rounded-full border border-primary/20 bg-card/70 p-1 text-xs backdrop-blur-sm"
     >
       {options.map(({ value: v, labelKey, Icon }) => {
         const active = value === v;
@@ -808,7 +814,7 @@ function ViewToggle({
             className={cn(
               "inline-flex h-6 items-center justify-center rounded-full px-2 font-normal transition-colors",
               active
-                ? "bg-primary text-primary-foreground"
+                ? "bg-primary text-primary-foreground shadow-[0_0_16px_rgb(0_210_255_/_0.28)]"
                 : "text-muted-foreground hover:text-foreground",
             )}
           >
@@ -828,9 +834,9 @@ function LoadingList() {
           key={i}
           className="flex animate-pulse items-center gap-3 rounded-lg border border-border/60 bg-card px-3 py-2"
         >
-          <div className="size-10 rounded-md bg-white/[0.04]" />
-          <div className="h-4 w-1/3 rounded bg-white/[0.05]" />
-          <div className="ml-auto h-3 w-16 rounded bg-white/[0.04]" />
+          <div className="size-10 rounded-md bg-muted" />
+          <div className="h-4 w-1/3 rounded bg-muted" />
+          <div className="ml-auto h-3 w-16 rounded bg-muted" />
         </div>
       ))}
     </div>
@@ -845,20 +851,20 @@ function LoadingGrid({ size = "md" }: { size?: "md" | "sm" }) {
         "grid gap-4",
         sm
           ? "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8"
-          : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7",
+          : DASHBOARD_CARD_GRID_CLASS,
       )}
     >
       {Array.from({ length: sm ? 8 : 6 }).map((_, i) => (
         <div
           key={i}
           className={cn(
-            "flex animate-pulse flex-col rounded-xl border border-border/60 bg-card",
+            "flex animate-pulse flex-col rounded-2xl border border-border/70 bg-card",
             sm ? "p-2" : "p-3",
           )}
         >
-          <div className="mb-3 aspect-[16/10] rounded-lg bg-white/[0.04]" />
-          <div className="h-4 w-2/3 rounded bg-white/[0.05]" />
-          <div className="mt-1 h-3 w-1/3 rounded bg-white/[0.04]" />
+          <div className="mb-3 aspect-[16/10] rounded-lg bg-muted" />
+          <div className="h-4 w-2/3 rounded bg-muted" />
+          <div className="mt-1 h-3 w-1/3 rounded bg-muted" />
         </div>
       ))}
     </div>
@@ -867,28 +873,28 @@ function LoadingGrid({ size = "md" }: { size?: "md" | "sm" }) {
 
 function FirstTimeEmpty({ onCreate }: { onCreate: () => void }) {
   const { t } = useTranslation();
-  const { gradient } = useMemo(() => getProjectCover("empty-dashboard"), []);
   return (
-    <div className="flex flex-col items-center justify-center pt-12 text-center">
-      <div className="relative mb-6">
-        <div
-          className="size-32 rounded-full blur-3xl opacity-50"
-          style={{ background: gradient }}
-        />
+    <div className="flex flex-col items-center justify-center pt-16 text-center">
+      <div className="relative mb-8">
+        <div className="size-36 rounded-full bg-primary/25 blur-3xl opacity-70" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <BookOpen className="size-8 text-white/80 drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]" />
+          <img
+            src="/brand/logo.png"
+            alt=""
+            className="size-16 object-contain drop-shadow-[0_0_24px_rgb(112_66_255_/_0.55)]"
+          />
         </div>
       </div>
-      <h3 className="mb-5 text-xl font-bold tracking-tight text-foreground">
+      <h3 className="mb-3 text-xl font-semibold tracking-tight text-foreground">
         {t("project.heroTitle")}
       </h3>
-      <p className="mb-8 text-sm text-muted-foreground">
+      <p className="mb-8 max-w-md text-sm leading-relaxed text-muted-foreground">
         {t("project.heroDescription")}
       </p>
       <Button
         onClick={onCreate}
         size="lg"
-        className="gap-2 rounded-[10px] px-6"
+        className="gap-2 rounded-full px-6"
       >
         <Plus className="size-4" />
         {t("project.heroButton")}
@@ -905,7 +911,7 @@ function TabEmpty({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-lg border border-dashed border-border/60 bg-card/30 px-6 py-12 text-center">
+    <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-muted/40 px-6 py-16 text-center">
       <h3 className="mb-1 text-base font-semibold text-foreground">{title}</h3>
       {description && (
         <p className="max-w-md text-sm text-muted-foreground">{description}</p>
@@ -920,7 +926,7 @@ function ActiveEmptyWithCreate({
   onCreate: () => void;
 }) {
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
+    <div className={DASHBOARD_CARD_GRID_CLASS}>
       <div>
         <CreateProjectCard onCreate={onCreate} />
       </div>
@@ -1290,18 +1296,18 @@ function ProjectDashboard() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-7xl">
+    <div className="mx-auto w-full max-w-6xl px-1">
       {/* Header strip */}
-      <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight text-foreground">
+      <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-xl">
+          <h1 className="text-[1.75rem] font-semibold tracking-tight text-foreground">
             {t("project.dashboardTitle")}
           </h1>
-          <p className="mt-[12px] text-[13px] font-medium text-muted-foreground">
+          <p className="mt-2 text-sm leading-relaxed text-foreground/72">
             {t("project.dashboardSubtitle")}
           </p>
         </div>
-        <div className="mt-4 flex flex-wrap items-center justify-end gap-2">
+        <div className="flex flex-wrap items-center justify-end gap-2">
           {totalProjects > 0 && (
             <div className="relative">
               <Search className="pointer-events-none absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
@@ -1310,16 +1316,15 @@ function ProjectDashboard() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder={t("project.searchPlaceholder")}
-                className="h-9 w-[min(15rem,calc(100vw-3rem))] rounded-full border-border bg-transparent pl-8 focus-visible:border-foreground/20 focus-visible:ring-2 focus-visible:ring-white/8 md:text-xs dark:bg-transparent"
+                className="h-9 w-[min(16rem,calc(100vw-3rem))] rounded-full border-border bg-card pl-8 text-sm focus-visible:border-primary/40 focus-visible:ring-2 focus-visible:ring-primary/15 md:text-xs"
               />
             </div>
           )}
           <Dialog open={createOpen} onOpenChange={setCreateOpen}>
             <DialogContent className="gap-4 overflow-hidden rounded-2xl border border-white/8 bg-background/68 p-7 shadow-none backdrop-blur-3xl sm:max-w-md">
               <DialogHeader className="gap-2">
-                <DialogTitle className="flex items-center gap-2 text-lg font-medium tracking-tight">
-                  <span aria-hidden="true">✨</span>
-                  <span>{t("project.create")}</span>
+                <DialogTitle className="text-lg font-medium tracking-tight">
+                  {t("project.create")}
                 </DialogTitle>
                 <p className="text-xs leading-5 text-muted-foreground">
                   {t("project.emptyDescription")}
@@ -1393,7 +1398,7 @@ function ProjectDashboard() {
       </div>
 
       {/* Tab strip + sort */}
-      <div className="mb-10 flex flex-wrap items-center gap-x-3 gap-y-2">
+      <div className="mb-7 flex flex-wrap items-center gap-x-3 gap-y-2">
         <div className="flex min-w-0 flex-wrap items-center gap-x-2.5 gap-y-2">
           <DashboardTabStrip
             current={currentTab}
@@ -1403,7 +1408,7 @@ function ProjectDashboard() {
           <Select value={sort} onValueChange={(v) => setSort(v as SortKey)}>
             <SelectTrigger
               size="sm"
-              className="h-8 gap-1 rounded-full border-border bg-transparent px-3 text-xs text-muted-foreground hover:bg-foreground/[0.04] data-[size=sm]:h-8 data-[size=sm]:rounded-full dark:bg-transparent dark:hover:bg-foreground/[0.04]"
+              className="h-8 gap-1 rounded-full border-border/80 bg-muted/60 px-3 text-xs text-foreground/80 hover:bg-muted hover:text-foreground data-[size=sm]:h-8 data-[size=sm]:rounded-full"
             >
               <SelectValue>
                 {(value: string) => {
@@ -1490,7 +1495,7 @@ function ProjectDashboard() {
               className={cn(
                 view === "list"
                   ? "flex flex-col gap-3"
-                  : "grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7",
+                  : DASHBOARD_CARD_GRID_CLASS,
               )}
             >
               {currentTab === "active" && view === "card" && (

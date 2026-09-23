@@ -37,7 +37,7 @@ const CATEGORIES: CreditTransactionCategory[] = ["all", "earned", "spent", "refu
 // primary), never the canvas one — so no `--accent` blue here.
 //
 // Surfaces are neutral grey, stacked as alpha over the page floor rather than
-// picked from `muted`/`card` — those two are teal-tinted (#182229 / #1f2c34)
+// picked from `muted`/`card` — those two are orange-tinted in the dark theme
 // and read as slate, not grey. Layering `foreground` alpha keeps the ramp
 // neutral and theme-agnostic: in light mode the same classes tint downward off
 // a white floor instead of upward off a black one.

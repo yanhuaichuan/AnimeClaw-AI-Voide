@@ -315,6 +315,11 @@ function StyleListItem({
               aria-label={t("styles.projectDefault")}
             />
           )}
+          {preset ? (
+            <span className="shrink-0 rounded-full border border-primary/35 bg-primary/10 px-1.5 py-px text-[10px] font-medium tracking-wide text-primary">
+              {t("styles.baichuanMark")}
+            </span>
+          ) : null}
         </div>
         <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
           {style.id} · {preset ? t("styles.preset") : t("styles.custom")}

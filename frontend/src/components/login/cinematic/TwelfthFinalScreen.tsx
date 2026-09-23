@@ -39,13 +39,13 @@ export function TwelfthFinalScreen({
       <div className={styles.content}>
         <img
           className={styles.mark}
-          src="/login-cinematic/final-mark.png"
+          src="/brand/logo.png"
           alt=""
           draggable={false}
           aria-hidden="true"
         />
         <h2>把一句设定推进成可看的宇宙</h2>
-        <p>输入角色冲突或世界观 让 AnimeClaw 拆成镜头节点并持续延展</p>
+        <p>输入角色冲突或世界观 让 百川Claw 拆成镜头节点并持续延展</p>
         <div className={styles.actions}>
           <button type="button" className={styles.primary} onClick={onStart}>
             开启无限创作

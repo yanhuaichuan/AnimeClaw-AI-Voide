@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Elastic-2.0
 # Copyright (c) 2026 yanhuaichuan
-"""AnimeClaw domain models. Stored as JSON beside DramaClaw project state."""
+"""百川Claw domain models. Stored as JSON beside DramaClaw project state."""
 
 from __future__ import annotations
 

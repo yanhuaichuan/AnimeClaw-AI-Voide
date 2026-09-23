@@ -32,13 +32,17 @@ export function BrandLockup({ value }: {
     : null;
   return (
     <span className="flex min-w-0 shrink-0 items-center">
-      <span className="animeclaw-wordmark" aria-hidden="true">
+      <span className="animeclaw-wordmark" aria-label="百川AI漫剧">
         <img
           className="animeclaw-wordmark__mark-img"
-          src="/brand/animeclaw-mark.svg"
+          src="/brand/logo.png"
           alt=""
         />
-        <span className="animeclaw-wordmark__name">AnimeClaw</span>
+        <img
+          className="animeclaw-wordmark__text-img"
+          src="/brand/logo_txt.png"
+          alt="百川AI漫剧"
+        />
       </span>
       {organizationBrand ? (
         <OrganizationBrand key={organizationBrand.updatedAt} logoUrl={organizationBrand.logoUrl} />

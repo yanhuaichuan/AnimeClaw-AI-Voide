@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Elastic-2.0
 # Copyright (c) 2026 yanhuaichuan
-"""First-pass expression sheet for AnimeClaw characters."""
+"""First-pass expression sheet for 百川Claw characters."""
 
 from __future__ import annotations
 

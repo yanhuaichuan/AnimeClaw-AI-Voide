@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "AnimeClaw",
+    "title": "百川Claw",
     "subtitle": "漫剧工厂 — 让角色在几十集里仍是同一个人",
     "updateRequired": {
       "title": "应用已更新",
@@ -73,8 +73,8 @@
       "eyebrow": "界面",
       "title": "主线走流程，画布做编排",
       "lede": "主线把一本小说拆成剧集、角色、分镜、首帧、视频和合成，一步一页推着走；漫画是一块节点画布，可以把主线的镜头投影进来自由改，改完再同步回主线。两条路共用同一批资产，不用来回搬素材。",
-      "windowTitle": "AnimeClaw — 第 03 集 · 画布",
-      "alt": "AnimeClaw 桌面端画布界面示意：顶部是剧集标签条，左侧分镜大纲，中间节点画布，右侧参数面板。",
+      "windowTitle": "百川Claw — 第 03 集 · 画布",
+      "alt": "百川Claw 桌面端画布界面示意：顶部是剧集标签条，左侧分镜大纲，中间节点画布，右侧参数面板。",
       "caption": "示意图（漫画画布视图）"
     },
     "capability": {
@@ -140,7 +140,7 @@
       },
       "v120": {
         "title": "功能积分透明化，外部智能体可接入",
-        "description": "统一展示功能价格、预计扣费与使用记录；Claude Code 等本地智能体可通过 MCP 直接调用 AnimeClaw CE。"
+        "description": "统一展示功能价格、预计扣费与使用记录；Claude Code 等本地智能体可通过 MCP 直接调用 百川Claw CE。"
       }
     },
     "faq": {
@@ -149,7 +149,7 @@
       "items": {
         "macGatekeeper": {
           "question": "Mac 提示「无法打开，因为无法验证开发者」怎么办？",
-          "answer": "在「访达 — 应用程序」里找到 AnimeClaw，按住 Control 点按图标选「打开」，在弹出的确认框里再点一次「打开」即可。这一步只需要做一次，之后正常双击启动。"
+          "answer": "在「访达 — 应用程序」里找到 百川Claw，按住 Control 点按图标选「打开」，在弹出的确认框里再点一次「打开」即可。这一步只需要做一次，之后正常双击启动。"
         },
         "winSmartScreen": {
           "question": "Windows 提示「Windows 已保护你的电脑」怎么办？",
@@ -864,7 +864,7 @@
     "anime": "漫剧"
   },
   "anime": {
-    "productEn": "AnimeClaw",
+    "productEn": "百川Claw",
     "productZh": "漫剧工厂",
     "timeline": "分镜时间轴",
     "nav": {
@@ -966,7 +966,7 @@
     },
     "empty": {
       "title": "先让同一个人连续出现 10 镜",
-      "body": "这是 AnimeClaw 的产品标准：脸、发、裙、红绳、耳坠保持不变。点下面按钮写入苏璃 Demo。",
+      "body": "这是百川Claw 的产品标准：脸、发、裙、红绳、耳坠保持不变。点下面按钮写入苏璃 Demo。",
       "cta": "生成 10 镜 Demo"
     },
     "characters": {
@@ -1317,7 +1317,7 @@
       "subtitle": "继续推进你的故事、资产与镜头",
       "noAccount": "还没有账号？",
       "applyAccount": "申请账号",
-      "showcaseLabel": "AnimeClaw 作品展示",
+      "showcaseLabel": "百川Claw 作品展示",
       "showcaseEyebrow": "漫剧工厂出品",
       "showcaseMeta": "创作现场",
       "showcaseTitle": "想象力，全速开拍",
@@ -1359,7 +1359,7 @@
     },
     "community": {
       "label": "社区作品",
-      "heading": "AnimeClaw TV",
+      "heading": "百川Claw TV",
       "likes": "{{count}} 次喜欢",
       "openWork": "打开作品「{{title}}」",
       "works": {
@@ -1436,7 +1436,7 @@
     "noProjects": "还没有项目，点击创建",
     "dashboardTitle": "项目管理中心",
     "dashboardReturn": "返回项目管理中心",
-    "dashboardSubtitle": "管理你的短剧项目和脚本",
+    "dashboardSubtitle": "角色圣经、分镜与连续性，都从这里开始",
     "emptyTitle": "开启你的第一个故事",
     "emptyDescription": "创建项目以开始撰写剧本、生成分镜、制作视频",
     "heroTitle": "开启你的创作之旅",
@@ -3278,6 +3278,7 @@
     "createStyle": "创建风格",
     "projectDefault": "项目默认",
     "preset": "预设",
+    "baichuanMark": "百川",
     "custom": "自定义",
     "customPreviewEmpty": "暂无上传的参考图",
     "uploadedPreview": "已上传参考图预览",
@@ -4539,7 +4540,7 @@
         "mediaCatalogCheckFailed": "检查官方媒体模型列表失败，请稍后重试。"
       },
       "custom": {
-        "description": "CE 使用本机 SQLite NewAPI。AnimeClaw 会自动连接数据库、创建运行令牌并启用本地渠道。",
+        "description": "CE 使用本机 SQLite NewAPI。百川Claw 会自动连接数据库、创建运行令牌并启用本地渠道。",
         "init": "初始化本地 NewAPI",
         "repair": "检测并修复",
         "initialized": "本地 NewAPI 已就绪。",
@@ -4558,7 +4559,7 @@
         "setupConfirmPassword": "确认密码",
         "setupPasswordPlaceholder": "至少 8 位",
         "setupConfirmPasswordPlaceholder": "再次输入密码",
-        "setupPasswordOnlyOnce": "该账号和密码只会在全新 NewAPI 首次创建管理员时提交给你的 NewAPI 实例。若 NewAPI 已经初始化，即使这里填写了密码，也不会修改已有管理员密码。AnimeClaw 不会保存密码，也不会用它执行后续操作；首次初始化完成后请自行保存，用于登录 NewAPI 后台。",
+        "setupPasswordOnlyOnce": "该账号和密码只会在全新 NewAPI 首次创建管理员时提交给你的 NewAPI 实例。若 NewAPI 已经初始化，即使这里填写了密码，也不会修改已有管理员密码。百川Claw 不会保存密码，也不会用它执行后续操作；首次初始化完成后请自行保存，用于登录 NewAPI 后台。",
         "setupRequired": "当前本地 NewAPI 尚未完成初始化，请填写初始化密码和确认密码后重试。",
         "setupAlreadyInitializedPasswordIgnored": "检测到你的 NewAPI 已经初始化，本次没有调用 NewAPI 初始化接口，也没有修改已有管理员密码；你刚刚填写的密码已被忽略并清空。",
         "setupPasswordMissingUsername": "请填写管理员用户名。",

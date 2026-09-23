@@ -24,10 +24,10 @@ function formatStars(count: number): string {
 
 export function Brand({ className }: { className?: string }) {
   return (
-    <div className={className ?? styles.brand} aria-label="AnimeClaw">
+    <div className={className ?? styles.brand} aria-label="百川Claw">
       <span className="animeclaw-wordmark">
-        <img className="animeclaw-wordmark__mark-img" src="/brand/animeclaw-mark.svg" alt="" />
-        <span className="animeclaw-wordmark__name">AnimeClaw</span>
+        <img className="animeclaw-wordmark__mark-img" src="/brand/logo.png" alt="" />
+        <img className="animeclaw-wordmark__text-img" src="/brand/logo_txt.png" alt="百川AI漫剧" />
       </span>
     </div>
   );

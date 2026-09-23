@@ -91,7 +91,7 @@ OPENAPI_TAGS = [
         "description": "Freezone candidate 写回 canonical asset slot 的相关接口。",
     },
     {"name": "freezone-jobs", "description": "Freezone 异步任务结果查询接口。"},
-    {"name": "anime", "description": "AnimeClaw 漫剧域：角色圣经、镜头、演技、连续性与预览。"},
+    {"name": "anime", "description": "百川Claw 漫剧域：角色圣经、镜头、演技、连续性与预览。"},
 ]
 
 api_router.include_router(auth.router, tags=["auth"])

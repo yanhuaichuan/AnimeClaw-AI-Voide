@@ -62,9 +62,9 @@ export function ProjectFolder({
     "--folder-color": color,
     "--folder-front-highlight": lightenColor(color, 0.28),
     "--folder-back-color": darkenColor(color, 0.10),
-    "--paper-1": "rgba(255, 255, 255, 0.44)",
-    "--paper-2": "rgba(255, 255, 255, 0.70)",
-    "--paper-3": "rgba(255, 255, 255, 0.96)",
+    "--paper-1": "rgba(255, 236, 220, 0.42)",
+    "--paper-2": "rgba(255, 244, 232, 0.68)",
+    "--paper-3": "rgba(255, 250, 244, 0.94)",
     "--folder-width": typeof width === "number" ? `${width}px` : width,
     "--folder-size": size,
   } as React.CSSProperties;
